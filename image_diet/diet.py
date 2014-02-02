@@ -67,8 +67,8 @@ def squeeze(path):
                            shell=True, stdout=PIPE)
         except:
             logger.error('Squeezing failed with parameters:')
-            logger.error(squeeze_cmd[filetype] % {'file': path})
-            logger.exception()
+            logger.error(squeeze_cmd % {'file': path})
+            logger.exception('')
             return None
 
         if retcode != 0:
